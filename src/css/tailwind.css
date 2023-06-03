@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Your Custom CSS Goes here*/
+
+body, html {
+    @apply scroll-smooth
+}
+
+body {
+    @apply overflow-x-hidden
+}
+
+.contain {
+    @apply max-w-[96rem] mx-auto px-4 sm:px-12 
+}
+
+.button {
+    @apply inline-block py-3 px-6 uppercase tracking-widest bg-brand hover:bg-brand/90 duration-300 rounded-lg text-white font-bold transition-colors
+}
+
+.link {
+    @apply hover:text-brand transition-colors duration-300
+}
+
+.hamburger {
+    @apply stroke-white
+}
