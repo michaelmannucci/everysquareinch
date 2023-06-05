@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {{title}}
-    </title>
+    <title>{{title}}</title>
     {% if description %}
       <meta name="description" content="{{description}}"/>
     {% endif %}
     {% block head %}{% endblock %}
+    <meta property="og:title" content="{{title}}"/>
+    <meta property="og:description" content="{{description}}"/>
+    <meta property="og:image" content="{{ og_image }}"/>
+    <meta property="og:url" content="https://example.com/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="{{title}}"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{{title}}"/>
+    <meta name="twitter:description" content="{{description}}"/>
+    <meta name="twitter:image" content="{{ og_image }}"/>
     <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
   </head>
-  <body class="text-gray-900">
+  <body class="text-gray-800">
 
     {% include "partials/nav.html" %}
     {% include "partials/mobile-nav.html" %}
