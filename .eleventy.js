@@ -21,7 +21,8 @@ module.exports = function (eleventyConfig) {
   // Copy various files to /_Site
   eleventyConfig.addPassthroughCopy({
     "./src/hamburger.json": "./hamburger.json",
-    "./src/img/svg/*": "./img/svg/"
+    "./src/img/svg/*": "./img/svg/",
+    "./src/admin/config.yml": "./admin/config.yml",
   })
 
   // Images plugin
