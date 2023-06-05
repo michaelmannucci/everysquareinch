@@ -1,6 +1,9 @@
+const Image = require("@11ty/eleventy-img")
+const path = require('path')
 const yaml = require("js-yaml")
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
+
   // Current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`)
 
@@ -20,6 +23,46 @@ module.exports = function(eleventyConfig) {
     "./src/hamburger.json": "./hamburger.json",
   });
 
+
+
+
+  function imageShortcode(src, alt, sizes = "(min-width: 1024px) 100vw, 50vw", className = "") {
+    let fullSrc = path.join(__dirname, "/src/img/", src)
+    console.log(`Generating image(s) from:  ${fullSrc}`)
+    let options = {
+      widths: [600, 900, 1500],
+      formats: ["webp", "jpeg"],
+      urlPath: "/img/",
+      outputDir: "./_site/img/",
+      filenameFormat: function (id, fullSrc, width, format, options) {
+        const extension = path.extname(fullSrc)
+        const name = path.basename(fullSrc, extension)
+        return `${name}-${width}w.${format}`
+      }
+    }
+  
+    // generate images
+    Image(fullSrc, options)
+  
+    let imageAttributes = {
+      alt,
+      sizes,
+      loading: "lazy",
+      decoding: "async",
+      class: className // add the class parameter to the imageAttributes object
+    }
+    // get metadata
+    metadata = Image.statsSync(fullSrc, options)
+    return Image.generateHTML(metadata, imageAttributes)
+  }
+  eleventyConfig.addShortcode("image", imageShortcode)
+  // --- END, eleventy-img
+
+
+
+
+
+
   // Transform HTML as njk
   return {
     dir: {
@@ -27,4 +70,6 @@ module.exports = function(eleventyConfig) {
     },
     htmlTemplateEngine: "njk",
   }
+
+
 }
