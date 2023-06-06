@@ -1,6 +1,7 @@
 const Image = require("@11ty/eleventy-img")
 const path = require('path')
 const yaml = require("js-yaml")
+const { EleventyI18nPlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
 
@@ -61,6 +62,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("image", imageShortcode)
   // Images plugin end
+
+  eleventyConfig.addPlugin(EleventyI18nPlugin, {
+    defaultLanguage: "en",
+  });
 
   // Transform HTML as njk
   return {

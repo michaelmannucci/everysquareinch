@@ -19,7 +19,7 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-      {% for services in services.services %}
+      {% for services in services[page.lang] %}
       <div>
         <div class="h-72 mb-4">
           {% image services.image, services.alt, "w-full h-full object-cover rounded-3xl border-4 border-brand" %}
