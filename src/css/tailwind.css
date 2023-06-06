@@ -4,7 +4,7 @@
 
 /*Your Custom CSS Goes here*/
 
-body {
+body, html {
     @apply overflow-x-hidden
 }
 
