@@ -25,6 +25,10 @@ module.exports = function (eleventyConfig) {
     "./src/hamburger.json": "./hamburger.json",
     "./src/img/svg/*": "./img/svg/",
     "./src/img/og-image.png": "./img/og-image.png",
+    "./src/apple-touch-icon.png": "./apple-touch-icon.png",
+    "./src/favicon-16x16.png": "./favicon-16x16.png",
+    "./src/favicon-32x32.png": "./favicon-32x32.png",
+    "./src/favicon.ico": "./favicon.ico",
     "./src/admin/config.yml": "./admin/config.yml"
   })
 
