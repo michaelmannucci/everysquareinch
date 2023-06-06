@@ -1,14 +1,13 @@
 <div class="hidden xl:block absolute top-0 w-full py-12 text-white z-50">
-  <div class="contain flex justify-between">
+  <div class="contain flex justify-between gap-8">
     <div>
-      <img src="img/svg/logo_wide.svg" alt="Every Square Inch Cleaning Service logo" class="h-12">
+      <img src="/img/svg/logo_wide.svg" alt="Every Square Inch Cleaning Service logo" class="flex-shrink h-12">
     </div>
     <nav>
-      <ul class="flex items-center gap-12 font-bold">
-        {% for items in navigation.items %}
-        <li><a href="{{ items.url }}" class="link">{{ items.title }}</a></li>
+      <ul class="flex items-center gap-12 font-bold whitespace-nowrap">
+        {% for items in navigation[page.lang] %}
+        <li><a href="{{ items.url }}" {% if loop.last %}class="button"{% else %}class="link"{% endif %}>{{ items.title }}</a></li>
         {% endfor %}
-        <li><a href="#contact" class="button">Get a quote</a></li>
       </ul>
     </nav>
   </div>
