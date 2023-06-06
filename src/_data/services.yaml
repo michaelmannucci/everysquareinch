@@ -1,51 +1,76 @@
----
 en:
-  - title: "Office Cleaning"
-    description: "Routine cleaning of offices, including desks, chairs, conference rooms, and other common areas. This would typically involve dusting, vacuuming, and waste removal."
-    image: "office-cleaning.jpg"
-    alt: "Commercial office cleaning"
-  - title: "Bathroom Sanitization"
-    description: "Deep cleaning and sanitizing of bathrooms, including toilets, sinks, and mirrors. This service could also include restocking necessary supplies like soap and toilet paper."
-    image: "bathroom-cleaning.jpg"
-    alt: "Office bathroom cleaning"
-  - title: "Kitchen and Breakroom Cleaning"
-    description: "Cleaning and sanitizing kitchen and breakroom areas, including appliances, countertops, tables, and chairs."
-    image: "kitchen-cleaning.jpg"
-    alt: "Office kitchen cleaning"
-  - title: "Carpet Cleaning"
-    description: "Deep cleaning of carpets to remove dirt, stains, and allergens. This service may include spot treatment, steam cleaning, or other specialized methods."
-    image: "carpet-cleaning.jpg"
-    alt: "Office carpet cleaning"
-  - title: "Waste and Recycling Management"
-    description: "Regular removal of trash and recyclables from all office areas, along with proper sorting and disposal."
-    image: "garbage.jpg"
-    alt: "Office window cleaning"
-  - title: "High Touch Point Sanitization"
-    description: "Special attention to areas and objects that are frequently touched, like doorknobs, light switches, and keyboards. This service is especially important in reducing the spread of germs."
-    image: "doorknob.jpg"
-    alt: "Door knob sanitation"
+  services:
+    - title: Office Cleaning
+      description: Routine cleaning of offices, including desks, chairs, conference
+        rooms, and other common areas. This would typically involve dusting,
+        vacuuming, and waste removal.
+      image: office-cleaning.jpg
+      alt: Commercial office cleaning
+    - title: Bathroom Sanitization
+      description: Deep cleaning and sanitizing of bathrooms, including toilets,
+        sinks, and mirrors. This service could also include restocking necessary
+        supplies like soap and toilet paper.
+      image: bathroom-cleaning.jpg
+      alt: Office bathroom cleaning
+    - title: Kitchen and Breakroom Cleaning
+      description: Cleaning and sanitizing kitchen and breakroom areas, including
+        appliances, countertops, tables, and chairs.
+      image: kitchen-cleaning.jpg
+      alt: Office kitchen cleaning
+    - title: Carpet Cleaning
+      description: Deep cleaning of carpets to remove dirt, stains, and allergens.
+        This service may include spot treatment, steam cleaning, or other
+        specialized methods.
+      image: carpet-cleaning.jpg
+      alt: Office carpet cleaning
+    - title: Waste and Recycling Management
+      description: Regular removal of trash and recyclables from all office areas,
+        along with proper sorting and disposal.
+      image: garbage.jpg
+      alt: Office window cleaning
+    - title: High Touch Point Sanitization
+      description: Special attention to areas and objects that are frequently touched,
+        like doorknobs, light switches, and keyboards. This service is
+        especially important in reducing the spread of germs.
+      image: doorknob.jpg
+      alt: Door knob sanitation
 fr:
-  - title: "Nettoyage de bureau"
-    description: "Nettoyage régulier des bureaux, y compris les bureaux, les chaises, les salles de conférence et autres espaces communs. Cela implique généralement le dépoussiérage, l'aspiration et l'enlèvement des déchets."
-    image: "office-cleaning.jpg"
-    alt: "Nettoyage commercial de bureau"
-  - title: "Assainissement de salle de bain"
-    description: "Nettoyage en profondeur et assainissement des salles de bain, y compris les toilettes, les lavabos et les miroirs. Ce service peut également inclure le réapprovisionnement en fournitures nécessaires telles que du savon et du papier toilette."
-    image: "bathroom-cleaning.jpg"
-    alt: "Nettoyage de salle de bain de bureau"
-  - title: "Nettoyage de cuisine et de salle de pause"
-    description: "Nettoyage et assainissement des zones de cuisine et de salle de pause, y compris les appareils, les comptoirs, les tables et les chaises."
-    image: "kitchen-cleaning.jpg"
-    alt: "Nettoyage de cuisine de bureau"
-  - title: "Nettoyage de tapis"
-    description: "Nettoyage en profondeur des tapis pour éliminer la saleté, les taches et les allergènes. Ce service peut inclure un traitement localisé, un nettoyage à la vapeur ou d'autres méthodes spécialisées."
-    image: "carpet-cleaning.jpg"
-    alt: "Nettoyage de tapis de bureau"
-  - title: "Gestion des déchets et du recyclage"
-    description: "Enlèvement régulier des déchets et des matériaux recyclables de tous les espaces de bureau, ainsi que leur tri et leur élimination appropriés."
-    image: "garbage.jpg"
-    alt: "Nettoyage de fenêtre de bureau"
-  - title: "Assainissement des points de contact élevés"
-    description: "Attention particulière aux zones et aux objets fréquemment touchés, tels que les poignées de porte, les interrupteurs et les claviers. Ce service est particulièrement important pour réduire la propagation des germes."
-    image: "doorknob.jpg"
-    alt: "Assainissement de poignée de porte"
+  services:
+    - title: Nettoyage de bureau
+      description: Nettoyage régulier des bureaux, y compris les bureaux, les chaises,
+        les salles de conférence et autres espaces communs. Cela implique
+        généralement le dépoussiérage, l'aspiration et l'enlèvement des déchets.
+      image: office-cleaning.jpg
+      alt: Nettoyage commercial de bureau
+    - title: Assainissement de salle de bain
+      description: Nettoyage en profondeur et assainissement des salles de bain, y
+        compris les toilettes, les lavabos et les miroirs. Ce service peut
+        également inclure le réapprovisionnement en fournitures nécessaires
+        telles que du savon et du papier toilette.
+      image: bathroom-cleaning.jpg
+      alt: Nettoyage de salle de bain de bureau
+    - title: Nettoyage de cuisine et de salle de pause
+      description: Nettoyage et assainissement des zones de cuisine et de salle de
+        pause, y compris les appareils, les comptoirs, les tables et les
+        chaises.
+      image: kitchen-cleaning.jpg
+      alt: Nettoyage de cuisine de bureau
+    - title: Nettoyage de tapis
+      description: Nettoyage en profondeur des tapis pour éliminer la saleté, les
+        taches et les allergènes. Ce service peut inclure un traitement
+        localisé, un nettoyage à la vapeur ou d'autres méthodes spécialisées.
+      image: carpet-cleaning.jpg
+      alt: Nettoyage de tapis de bureau
+    - title: Gestion des déchets et du recyclage
+      description: Enlèvement régulier des déchets et des matériaux recyclables de
+        tous les espaces de bureau, ainsi que leur tri et leur élimination
+        appropriés.
+      image: garbage.jpg
+      alt: Nettoyage de fenêtre de bureau
+    - title: Assainissement des points de contact élevés
+      description: Attention particulière aux zones et aux objets fréquemment touchés,
+        tels que les poignées de porte, les interrupteurs et les claviers. Ce
+        service est particulièrement important pour réduire la propagation des
+        germes.
+      image: doorknob.jpg
+      alt: Assainissement de poignée de porte
