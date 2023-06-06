@@ -1,0 +1,11 @@
+{% if page.lang == 'fr' %}
+    <a href="{{ page.url | replace('/fr', '') }}" class="fixed bottom-4 right-4 z-50 px-3 py-2 rounded-lg bg-red-100 font-bold opacity-80 sm:opacity-50 hover:opacity-100 duration-200 flex items-center gap-2">
+        <img src="/img/svg/canada.svg" alt="" class="w-6 h-6 rounded-md">
+        <span class="text-red-500">English</span>
+    </a>
+{% else %}
+    <a href="/fr{{ page.url }}" class="fixed bottom-4 right-4 z-50 px-3 py-2 rounded-lg bg-blue-200 font-bold opacity-80 sm:opacity-50 hover:opacity-100 duration-200 flex items-center gap-2">
+        <img src="/img/svg/qc.svg" alt="" class="w-6 h-6 rounded-md">
+        <span class="text-[#003da5]">Français</span>
+    </a>
+{% endif %}
