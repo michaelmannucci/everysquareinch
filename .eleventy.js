@@ -74,23 +74,23 @@ module.exports = function (eleventyConfig) {
     defaultLanguage: "en",
   });
 
- // Set a flag to enable/disable the htmlmin transform
-const enableHtmlMin = false;
+  // Set a flag to enable/disable the htmlmin transform
+  const enableHtmlMin = true;
 
-// Add the htmlmin transform to the configuration
-eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-  // Check if the flag is set to true
-  if (enableHtmlMin && outputPath.endsWith(".html")) {
-    let minified = htmlmin.minify(content, {
-      useShortDoctype: true,
-      removeComments: true,
-      collapseWhitespace: true,
-    });
-    return minified;
-  }
+  // Add the htmlmin transform to the configuration
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    // Check if the flag is set to true
+    if (enableHtmlMin && outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
 
-  return content;
-});
+    return content;
+  });
 
   // Transform HTML as njk
   return {
