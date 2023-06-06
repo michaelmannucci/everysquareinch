@@ -23,7 +23,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./src/hamburger.json": "./hamburger.json",
     "./src/img/svg/*": "./img/svg/",
-    "./src/img/og-image.png": "./img/og-image.png"
+    "./src/img/og-image.png": "./img/og-image.png",
+    "./src/admin/config.yml": "./admin/config.yml"
   })
 
   // Images plugin

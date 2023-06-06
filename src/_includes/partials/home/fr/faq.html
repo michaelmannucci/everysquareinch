@@ -28,7 +28,7 @@
             <h2 class="font-bold text-4xl mb-8">Questions <span class="text-brand">fréquemment posées</span></h2>
         </div>
         <div class="col-span-1 lg:col-span-2 flex flex-col divide-y">
-            {% for faq in faq[page.lang] %}
+            {% for faq in faq[page.lang].faq %}
                 <div class="{% if loop.first %}pb-10{% elseif loop.last %}pt-10{% else %}py-10{% endif %}" x-data="{ open : false }">
                     <div @click="open = !open" class="flex items-center justify-between gap-12 group cursor-pointer">
                         <h3 class="text-2xl font-bold group-hover:text-brand transition-colors duration-200">{{ faq.question }}</h3>
