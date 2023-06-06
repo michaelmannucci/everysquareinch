@@ -2,6 +2,7 @@ const Image = require("@11ty/eleventy-img")
 const path = require('path')
 const yaml = require("js-yaml")
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
+const htmlmin = require("html-minifier");
 
 module.exports = function (eleventyConfig) {
 
@@ -64,8 +65,23 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("image", imageShortcode)
   // Images plugin end
 
+  // i18n
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: "en",
+  });
+
+  // Minify HTML
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    if (outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
+
+    return content;
   });
 
   // Transform HTML as njk
