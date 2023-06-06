@@ -1,7 +1,7 @@
 <section id="services" class="relative py-36 sm:py-48 bg-gray-100">
   <!-- Wave -->
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 26"
-    class="absolute w-screen -top-w-[105vw] -left-2 -top-[1.7vw] z-20 fill-gray-100">
+    class="absolute w-[105vw] -left-2 -top-[1.7vw] z-20 fill-gray-100">
     <path d="M0,0l8,0.5C16,1,32,1.9,48,3.9c16,1.9,32,4.8,48,5.8c16,0.9,32,0,48-2.4S176,1,192,1c16,0,32,3.8,48,7.7
           s32,7.7,48,10.6c16,2.9,32,4.9,48,3.4c16-1.4,32-6.3,48-11.1s32-9.7,48-11.1C448-1,464,1,480,3.4c16,2.4,32,5.3,48,6.7
           s32,1.4,48,0.5c16-0.9,32-2.9,48-4.3c16-1.5,32-2.4,48-1.9s32,2.4,48,4.3s32,3.9,48,1.9c16-1.9,32-7.7,48-6.7c16,0.9,32,8.7,48,11.6
@@ -13,13 +13,12 @@
   </svg>
   <div class="contain">
     <div class="max-w-3xl mx-auto md:text-center mb-16 md:mb-24">
-      <h2 class="font-bold text-4xl mb-8">Les services . <span class="text-brand">we offer</span></h2>
-      <p class="text-lg">We provide a wide array of commercial cleaning services designed to meet the unique needs of
-        your business environment.</p>
+      <h2 class="font-bold text-4xl mb-8">Les services <span class="text-brand">que nous proposons</span></h2>
+      <p class="text-lg">Nous offrons une large gamme de services de nettoyage commercial conçus pour répondre aux besoins uniques de votre environnement d'affaires.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-      {% for services in services.services %}
+      {% for services in services[page.lang].services %}
       <div>
         <div class="h-72 mb-4">
           {% image services.image, services.alt, "w-full h-full object-cover rounded-3xl border-4 border-brand" %}
