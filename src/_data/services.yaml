@@ -13,8 +13,7 @@ en:
       image: bathroom-cleaning.jpg
       alt: Office bathroom cleaning
     - title: Kitchen and Breakroom Cleaning
-      description: Cleaning and sanitizing kitchen and breakroom areas, including
-        appliances, countertops, tables, and chairs.
+      description: Cleaning and sanitizing kitchen and breakroom areas, countertops, tables, and chairs.
       image: kitchen-cleaning.jpg
       alt: Office kitchen cleaning
     - title: Carpet Cleaning
@@ -51,7 +50,7 @@ fr:
       alt: Nettoyage de salle de bain de bureau
     - title: Nettoyage de cuisine et de salle de pause
       description: Nettoyage et assainissement des zones de cuisine et de salle de
-        pause, y compris les appareils, les comptoirs, les tables et les
+        pause, y compris les comptoirs, les tables et les
         chaises.
       image: kitchen-cleaning.jpg
       alt: Nettoyage de cuisine de bureau
