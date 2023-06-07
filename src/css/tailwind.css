@@ -5,10 +5,6 @@
 /*Your Custom CSS Goes here*/
 
 body, html {
-    @apply scroll-smooth
-}
-
-body {
     @apply overflow-x-hidden
 }
 

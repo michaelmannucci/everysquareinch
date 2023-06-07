@@ -1,0 +1,57 @@
+local_backend: true
+
+backend:
+  # Use netlify identity as backend
+  name: git-gateway
+  branch: master
+  ### enable below lines for github integration ###
+  # name: github
+  # repo: surjithctly/neat-starter
+publish_mode: editorial_workflow
+media_folder: "src/img"
+public_folder: ""
+
+i18n:
+  structure: single_file
+  locales: [en, fr]
+  default_locale: en
+
+collections:
+  - label: "Settings"
+    name: "settings"
+    editor:
+      preview: false
+    i18n: true
+    files:
+      - label: "Services"
+        name: "Services"
+        file: "src/_data/services.yaml"
+        format: "yaml"
+        i18n: true
+        fields:
+          - label: Services
+            name: services
+            widget: list
+            allow_add: true
+            collapsed: true
+            i18n: true
+            fields:
+              - { label: Title, name: title, widget: string, i18n: true }
+              - { label: Description, name: description, widget: string, i18n: true }
+              - { label: Image, name: image, widget: image, i18n: duplicate }
+              - { label: Image Alt Tag, name: alt, widget: string, i18n: true }
+      - label: "FAQ"
+        name: "FAQ"
+        file: "src/_data/faq.yaml"
+        format: "yaml"
+        i18n: true
+        fields:
+          - label: FAQ
+            name: faq
+            widget: list
+            allow_add: true
+            collapsed: true
+            i18n: true
+            fields:
+              - { label: Question, name: question, widget: string, i18n: true }
+              - { label: Answer, name: answer, widget: string, i18n: true }

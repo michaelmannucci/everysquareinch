@@ -1,0 +1,33 @@
+<section id="contact" class="pt-36 lg:pt-48 pb-28 lg:pb-36 relative bg-gray-100">
+    <div class="contain relative z-50 flex flex-col lg:flex-row items-center gap-48">
+        <div class="w-full lg:w-1/2">
+            <h2 class="text-4xl font-bold mb-8">Obtenez un <span class="text-brand">devis gratuit</span></h2>
+            <form name="contact" netlify>
+                <input type="hidden" name="form-name" value="contact">
+                <div class="flex flex-col gap-4 mb-4">
+                    <input type="text" name="name" class="w-full rounded-lg border border-gray-200 py-3 px-5 focus:outline-brand" placeholder="Votre nom">
+                    <input type="text" name="postalCode" class="w-full rounded-lg border border-gray-200 py-3 px-5 focus:outline-brand" placeholder="Code postal">
+                    <input type="tel" name="phoneNumber" class="w-full rounded-lg border border-gray-200 py-3 px-5 focus:outline-brand" placeholder="Numéro de téléphone">
+                </div>
+                <button type="submit" class="button">Obtenir un devis</button>
+            </form>
+        </div>
+        <div class="hidden lg:block w-full lg:w-1/2">
+            <h3 class="text-white text-5xl leading-tight font-bold relative z-50">Préférez-vous un appel ? Appelez dès maintenant <span class="text-brand">le (555) 123-4567</span> pour un devis gratuit</h3>
+        </div>
+    </div>
+    <div class="hidden lg:flex absolute inset-0 w-full h-full">
+        <div class="w-1/2"></div>
+        <div class="relative w-1/2">
+            <div class="absolute inset-0 w-full h-full bg-gray-900/70 z-10"></div>
+            {% image "office.jpg", "Espace de bureau nettoyé", "absolute inset-0 w-full h-full object-cover object-left" %}
+        </div>
+    </div>
+</section>
+<div class="lg:hidden relative pt-36 pb-28">
+    <div class="absolute inset-0 w-full h-full bg-gray-900/70 z-10"></div>
+    {% image "office.jpg", "Espace de bureau nettoyé", "absolute inset-0 w-full h-full object-cover object-left" %}
+    <div class="contain">
+        <h3 class="text-white text-4xl leading-tight font-bold relative z-50">Préférez-vous un appel ? Appelez dès maintenant <span class="text-brand">le (555) 123-4567</span> pour un devis gratuit</h3>
+    </div>
+</div>

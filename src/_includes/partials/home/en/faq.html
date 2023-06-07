@@ -1,0 +1,49 @@
+<section id="faq" class="py-36 sm:py-48 relative bg-white">
+    <!-- Wave -->
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 26"
+        class="absolute w-[105vw] -left-2 -top-[1.7vw] z-20 fill-white">
+        <path d="M0,0l8,0.5C16,1,32,1.9,48,3.9c16,1.9,32,4.8,48,5.8c16,0.9,32,0,48-2.4S176,1,192,1c16,0,32,3.8,48,7.7
+          s32,7.7,48,10.6c16,2.9,32,4.9,48,3.4c16-1.4,32-6.3,48-11.1s32-9.7,48-11.1C448-1,464,1,480,3.4c16,2.4,32,5.3,48,6.7
+          s32,1.4,48,0.5c16-0.9,32-2.9,48-4.3c16-1.5,32-2.4,48-1.9s32,2.4,48,4.3s32,3.9,48,1.9c16-1.9,32-7.7,48-6.7c16,0.9,32,8.7,48,11.6
+          c16,2.9,32,0.9,48-1s32-3.9,48-5.8s32-3.9,48-2.9s32,4.8,48,4.8c16,0,32-3.8,48-6.3s32-3.3,48-1.9c16,1.5,32,5.3,48,8.2
+          c16,2.9,32,4.9,48,5.3c16,0.5,32-0.5,48-1.9c16-1.4,32-3.4,48-5.8c16-2.4,32-5.3,48-3.4c16,2,32,8.6,40,12.1l8,3.4V26h-8
+          c-8,0-24,0-40,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0
+          s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0
+          s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-40,0H0V0z" />
+    </svg>
+    <!-- Wave -->
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 26"
+        class="absolute rotate-180 w-[105vw] -left-2 -bottom-[1.7vw] z-20 fill-white">
+        <path d="M0,0l8,0.5C16,1,32,1.9,48,3.9c16,1.9,32,4.8,48,5.8c16,0.9,32,0,48-2.4S176,1,192,1c16,0,32,3.8,48,7.7
+          s32,7.7,48,10.6c16,2.9,32,4.9,48,3.4c16-1.4,32-6.3,48-11.1s32-9.7,48-11.1C448-1,464,1,480,3.4c16,2.4,32,5.3,48,6.7
+          s32,1.4,48,0.5c16-0.9,32-2.9,48-4.3c16-1.5,32-2.4,48-1.9s32,2.4,48,4.3s32,3.9,48,1.9c16-1.9,32-7.7,48-6.7c16,0.9,32,8.7,48,11.6
+          c16,2.9,32,0.9,48-1s32-3.9,48-5.8s32-3.9,48-2.9s32,4.8,48,4.8c16,0,32-3.8,48-6.3s32-3.3,48-1.9c16,1.5,32,5.3,48,8.2
+          c16,2.9,32,4.9,48,5.3c16,0.5,32-0.5,48-1.9c16-1.4,32-3.4,48-5.8c16-2.4,32-5.3,48-3.4c16,2,32,8.6,40,12.1l8,3.4V26h-8
+          c-8,0-24,0-40,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0
+          s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0
+          s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-48,0s-32,0-40,0H0V0z" />
+    </svg>
+    <div class="contain grid grid-cols-1 lg:grid-cols-3 gap-16">
+        <div>
+            <h2 class="font-bold text-4xl mb-8">Frequently asked <span class="text-brand">questions</span></h2>
+        </div>
+        <div class="col-span-1 lg:col-span-2 flex flex-col divide-y">
+            {% for faq in faq[page.lang].faq %}
+                <div class="{% if loop.first %}pb-10{% elseif loop.last %}pt-10{% else %}py-10{% endif %}" x-data="{ open : false }">
+                    <div @click="open = !open" class="flex items-center justify-between gap-12 group cursor-pointer">
+                        <h3 class="text-2xl font-bold group-hover:text-brand transition-colors duration-200">{{ faq.question }}</h3>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 group-hover:fill-brand transition-colors duration-200" x-show="!open">
+                                <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 group-hover:fill-brand transition-colors duration-200" x-show="open">
+                                <path fill-rule="evenodd" d="M3.75 12a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                            </svg>
+                        </div>                         
+                    </div>
+                    <p x-show="open" class="mt-4">{{ faq.answer }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

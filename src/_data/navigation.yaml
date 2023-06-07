@@ -1,10 +1,23 @@
 ---
-items:
+en:
   - title: Home
     url: /
   - title: How We Help
-    url: "#help"
+    url: "/#how-we-help"
   - title: Our Services
-    url: "#services"
+    url: "/#services"
   - title: Frequently Asked Questions
-    url: "#faq"
+    url: "/#faq"
+  - title: Get a quote
+    url: "/#contact"
+fr:
+  - title: Accueil
+    url: /fr
+  - title: Comment nous aidons
+    url: "/fr/#comment-nous-aidons"
+  - title: Nos services
+    url: "/fr/#services"
+  - title: Questions fréquemment posées
+    url: "/fr/#faq"
+  - title: Obtenez un devis
+    url: "/fr/#contact"

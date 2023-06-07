@@ -9,7 +9,7 @@
   <div class="py-10 absolute top-0 w-full z-50 transition-colors">
     <div class="contain flex justify-between items-center">
       <a href="/">
-        <img src="/img/svg/logo_wide.svg" alt="Every Square Inch Cleaning Service logo" class="h-16">
+        <img src="/img/svg/logo_wide.svg" alt="Every Square Inch Cleaning Service logo" width="370px" height="64px" class="h-16">
       </a>
 
       <div class="w-full h-full flex justify-end items-center">
@@ -24,10 +24,9 @@
     <div class="h-32 bg-gray-900 w-full"></div>
     <nav class="contain bg-gray-900 flex-grow w-full">
 
-      {% for items in navigation.items %}
-        <a href="{{ items.url }}" class="block py-3 text-white font-medium focus:border-0 focus:outline-none" @click="open = !open, open ? (animation.setDirection(1), animation.play()) : (animation.setDirection(-1), animation.play())">{{ items.title }}</a>
+      {% for items in navigation[page.lang] %}
+        <a href="{{ items.url }}" class="block text-white font-medium focus:border-0 focus:outline-none {% if loop.last %}py-4 mt-6 w-full text-center bg-brand rounded-lg{% else %}py-3{% endif %}" @click="open = !open, open ? (animation.setDirection(1), animation.play()) : (animation.setDirection(-1), animation.play())">{{ items.title }}</a>
       {% endfor %}
-      <a href="#contact" class="block py-3 text-white font-medium focus:border-0 focus:outline-none" @click="open = !open, open ? (animation.setDirection(1), animation.play()) : (animation.setDirection(-1), animation.play())">Get a Quote</a>
 
     </nav>
   </div>

@@ -1,6 +1,8 @@
 const Image = require("@11ty/eleventy-img")
 const path = require('path')
 const yaml = require("js-yaml")
+const { EleventyI18nPlugin } = require("@11ty/eleventy");
+const htmlmin = require("html-minifier");
 
 module.exports = function (eleventyConfig) {
 
@@ -22,7 +24,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./src/hamburger.json": "./hamburger.json",
     "./src/img/svg/*": "./img/svg/",
-    "./src/img/og-image.png": "./img/og-image.png"
+    "./src/img/og-image.png": "./img/og-image.png",
+    "./src/apple-touch-icon.png": "./apple-touch-icon.png",
+    "./src/favicon-16x16.png": "./favicon-16x16.png",
+    "./src/favicon-32x32.png": "./favicon-32x32.png",
+    "./src/favicon.ico": "./favicon.ico",
+    "./src/admin/config.yml": "./admin/config.yml"
   })
 
   // Images plugin
@@ -61,6 +68,29 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("image", imageShortcode)
   // Images plugin end
+
+  // i18n
+  eleventyConfig.addPlugin(EleventyI18nPlugin, {
+    defaultLanguage: "en",
+  });
+
+  // Set a flag to enable/disable the htmlmin transform
+  const enableHtmlMin = true;
+
+  // Add the htmlmin transform to the configuration
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    // Check if the flag is set to true
+    if (enableHtmlMin && outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
+
+    return content;
+  });
 
   // Transform HTML as njk
   return {
