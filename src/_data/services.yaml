@@ -17,9 +17,7 @@ en:
       image: kitchen-cleaning.jpg
       alt: Office kitchen cleaning
     - title: Carpet Cleaning
-      description: Deep cleaning of carpets to remove dirt, stains, and allergens.
-        This service may include spot treatment, steam cleaning, or other
-        specialized methods.
+      description: Deep cleaning of carpets to ensure the thorough removal of dirt and allergens, restoring their cleanliness and freshness.
       image: carpet-cleaning.jpg
       alt: Office carpet cleaning
     - title: Waste and Recycling Management
@@ -55,9 +53,7 @@ fr:
       image: kitchen-cleaning.jpg
       alt: Nettoyage de cuisine de bureau
     - title: Nettoyage de tapis
-      description: Nettoyage en profondeur des tapis pour éliminer la saleté, les
-        taches et les allergènes. Ce service peut inclure un traitement
-        localisé, un nettoyage à la vapeur ou d'autres méthodes spécialisées.
+      description: Nettoyage en profondeur des tapis pour assurer l'élimination complète de la saleté et des allergènes, restaurant ainsi leur propreté et leur fraîcheur.
       image: carpet-cleaning.jpg
       alt: Nettoyage de tapis de bureau
     - title: Gestion des déchets et du recyclage
